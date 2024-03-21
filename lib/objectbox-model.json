@@ -1,0 +1,102 @@
+{
+  "_note1": "KEEP THIS FILE! Check it into a version control system (VCS) like git.",
+  "_note2": "ObjectBox manages crucial IDs for your object model. See docs for details.",
+  "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
+  "entities": [
+    {
+      "id": "1:2991653030238645718",
+      "lastPropertyId": "10:4052540585537623492",
+      "name": "Item",
+      "properties": [
+        {
+          "id": "1:8741631405361082448",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:1322395431507151297",
+          "name": "name",
+          "type": 9
+        },
+        {
+          "id": "3:189703086753077342",
+          "name": "isPickedUp",
+          "type": 1
+        },
+        {
+          "id": "4:6052268721509610893",
+          "name": "description",
+          "type": 9
+        },
+        {
+          "id": "5:7654505278522551385",
+          "name": "pickupTime",
+          "type": 9
+        },
+        {
+          "id": "6:8953431363877562308",
+          "name": "location",
+          "type": 9
+        },
+        {
+          "id": "7:5443758892731576138",
+          "name": "imageUrl",
+          "type": 9
+        },
+        {
+          "id": "8:5770046995949937565",
+          "name": "customerId",
+          "type": 11,
+          "flags": 520,
+          "indexId": "1:8414486794107949708",
+          "relationTarget": "User"
+        },
+        {
+          "id": "9:5002497785494899483",
+          "name": "driverId",
+          "type": 11,
+          "flags": 520,
+          "indexId": "2:7187463534542623946",
+          "relationTarget": "User"
+        },
+        {
+          "id": "10:4052540585537623492",
+          "name": "isUrgent",
+          "type": 1
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "2:776245123130376692",
+      "lastPropertyId": "2:2752247423445540932",
+      "name": "User",
+      "properties": [
+        {
+          "id": "1:7050899754481115148",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:2752247423445540932",
+          "name": "name",
+          "type": 9
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "lastEntityId": "2:776245123130376692",
+  "lastIndexId": "2:7187463534542623946",
+  "lastRelationId": "0:0",
+  "lastSequenceId": "0:0",
+  "modelVersion": 5,
+  "modelVersionParserMinimum": 5,
+  "retiredEntityUids": [],
+  "retiredIndexUids": [],
+  "retiredPropertyUids": [],
+  "retiredRelationUids": [],
+  "version": 1
+}
