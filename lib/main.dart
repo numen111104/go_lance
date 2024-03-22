@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:go_lance/presentation/pages/login_page.dart';
+import 'package:go_lance/presentation/pages/welcome_page.dart';
 import 'package:go_lance/repositories/object_box.dart';
 
 import 'objectbox.g.dart';
@@ -19,9 +21,11 @@ class MainApp extends StatelessWidget {
     return MaterialApp(
       title: 'Go Lance',
       theme: ThemeData(),
-      home: Scaffold(
-        body: Center(child: Text("Hello World")),
-      ),
-    );
+      initialRoute: '/',
+      routes: {
+        '/' :(context) => const WelcomePage(),
+        '/login' :(context) => LoginPage(),
+      },
+      );
   }
 }

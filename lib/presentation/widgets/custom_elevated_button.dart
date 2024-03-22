@@ -16,7 +16,7 @@ class CustomButton extends StatelessWidget {
       this.textColor = Colors.white,
       required this.text,
       this.width = double.infinity,
-      required this.height,
+      this.height = 40,
       this.fontWeight = FontWeight.w600,
       this.onPressed,
       this.fontSize});
@@ -29,10 +29,13 @@ class CustomButton extends StatelessWidget {
       child: ElevatedButton(
         onPressed: onPressed,
         style: ButtonStyle(
-            backgroundColor: MaterialStateProperty.all(color),
-            shape: MaterialStateProperty.all(RoundedRectangleBorder(
+          backgroundColor: MaterialStateProperty.all(color),
+          shape: MaterialStateProperty.all(
+            RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(10),
-            ),),),
+            ),
+          ),
+        ),
         child: Text(
           text,
           style: GoogleFonts.montserrat(
