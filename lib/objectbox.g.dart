@@ -206,12 +206,6 @@ obx_int.ModelDefinition getObjectBoxModel() {
               .vTableGet(buffer, rootOffset, 14, '');
           final imageUrlParam = const fb.StringReader(asciiOptimization: true)
               .vTableGet(buffer, rootOffset, 16, '');
-          final customerParam = obx.ToOne<User>(
-              targetId:
-                  const fb.Int64Reader().vTableGet(buffer, rootOffset, 18, 0));
-          final driverParam = obx.ToOne<User>(
-              targetId:
-                  const fb.Int64Reader().vTableGet(buffer, rootOffset, 20, 0));
           final object = Item(
               id: idParam,
               name: nameParam,
@@ -220,9 +214,7 @@ obx_int.ModelDefinition getObjectBoxModel() {
               description: descriptionParam,
               pickupTime: pickupTimeParam,
               location: locationParam,
-              imageUrl: imageUrlParam,
-              customer: customerParam,
-              driver: driverParam);
+              imageUrl: imageUrlParam,);
           object.customer.attach(store);
           object.driver.attach(store);
           return object;

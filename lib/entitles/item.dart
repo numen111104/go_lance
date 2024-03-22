@@ -23,9 +23,7 @@ class Item {
       required this.description,
       required this.pickupTime,
       required this.location,
-      required this.imageUrl,
-      required this.customer,
-      required this.driver});
+      required this.imageUrl,});
 }
 
 enum PatientState { dead, emergency, elderly, home, threat, minorInjury }

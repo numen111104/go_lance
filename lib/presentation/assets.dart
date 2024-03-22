@@ -18,4 +18,6 @@ abstract class Assets {
   static const String logo = "assets/logo.png";
 
   static const String bgpic = "assets/bgpic.jpg";
+
+  static const String placeholder = "assets/placeholder.jpg";
 }
