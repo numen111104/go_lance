@@ -20,4 +20,5 @@ abstract class Assets {
   static const String bgpic = "assets/bgpic.jpg";
 
   static const String placeholder = "assets/placeholder.jpg";
+  static const String emergent_placeholder = "assets/urgent_placeholder.jpg";
 }
