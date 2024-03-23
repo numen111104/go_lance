@@ -214,8 +214,12 @@ obx_int.ModelDefinition getObjectBoxModel() {
               description: descriptionParam,
               pickupTime: pickupTimeParam,
               location: locationParam,
-              imageUrl: imageUrlParam,);
+              imageUrl: imageUrlParam);
+          object.customer.targetId =
+              const fb.Int64Reader().vTableGet(buffer, rootOffset, 18, 0);
           object.customer.attach(store);
+          object.driver.targetId =
+              const fb.Int64Reader().vTableGet(buffer, rootOffset, 20, 0);
           object.driver.attach(store);
           return object;
         }),
