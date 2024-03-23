@@ -403,19 +403,19 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.5.1"
-  objectbox_flutter_libs:
-    dependency: "direct main"
-    description:
-      name: objectbox_flutter_libs
-      sha256: dca86b2d1074110573b69cbd9afb6b67ab9d2c824704c6ac5187e546418baf9c
-      url: "https://pub.dev"
-    source: hosted
-    version: "2.5.1"
   objectbox_generator:
     dependency: "direct dev"
     description:
       name: objectbox_generator
       sha256: c22c59c27edb90e709da00f0b2e788a5774a4cdce12d393d117a39500877cfb7
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.5.1"
+  objectbox_sync_flutter_libs:
+    dependency: "direct main"
+    description:
+      name: objectbox_sync_flutter_libs
+      sha256: "92c55bd25c5c08f0872567d59933db4d1ad0f8e93c7600985c247cf45ece15fe"
       url: "https://pub.dev"
     source: hosted
     version: "2.5.1"
