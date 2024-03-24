@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:go_lance/entitles/item.dart';
 import 'package:go_lance/entitles/user.dart';
 import 'package:go_lance/main.dart';
@@ -203,7 +202,10 @@ class _MainPageState extends State<MainPage> {
                     backgroundColor: MaterialStateProperty.all(goLanceMagenta),
                     shape: MaterialStateProperty.all(CircleBorder()),
                   ),
-                  child: Icon(Icons.add),
+                  child: Icon(
+                    Icons.add,
+                    color: Colors.white,
+                  ),
                 ),
               ),
               const NavBarIcon(text: "Forum", iconAssetPath: Assets.forum),
