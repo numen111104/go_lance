@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:go_lance/entitles/item.dart';
 import 'package:go_lance/entitles/user.dart';
+import 'package:go_lance/main.dart';
 import 'package:go_lance/presentation/color_pallete.dart';
 import 'package:go_lance/presentation/widgets/custom_elevated_button.dart';
+import 'package:go_lance/repositories/item_repository.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class ItemDetailsPage extends StatelessWidget {
@@ -118,24 +120,34 @@ class ItemDetailsPage extends StatelessWidget {
                     if (item.driver.target == null &&
                         item.customer.target?.id != user.id)
                       CustomButton(
-                        text: "Pick-Up this",
-                        onPressed: () {},
+                        text: "Request to Pick-Up",
+                        onPressed: () {
+                          ItemRepository(store: store)
+                              .requestItem(item: item, user: user);
+                          Navigator.pop(context);
+                        },
                         color: goLanceMagenta,
                       ),
                     if (item.driver.target != null)
                       Column(children: [
-                        Text(
-                          "${item.driver.target?.id == user.id ? "You" : item.driver.target?.name} requested this client",
-                          style: GoogleFonts.montserrat(
-                              fontWeight: FontWeight.w600),
+                        Center(
+                          child: Text(
+                            "${item.driver.target?.id == user.id ? "You" : item.driver.target?.name} requested this client",
+                            style: GoogleFonts.montserrat(
+                                fontWeight: FontWeight.w600),
+                          ),
                         ),
-                        if (item.customer.target?.id != user.id)
+                        if (item.customer.target?.id == user.id)
                           Padding(
                             padding: const EdgeInsets.only(top: 10),
                             child: CustomButton(
                                 color: goLanceYellow,
                                 text: "Confirm Pick-Up",
-                                onPressed: () {}),
+                                onPressed: () {
+                                  ItemRepository(store: store)
+                                      .pickUpItem(item: item);
+                                  Navigator.pop(context);
+                                }),
                           ),
                       ])
                   ],
