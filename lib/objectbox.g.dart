@@ -13,7 +13,7 @@ import 'package:flat_buffers/flat_buffers.dart' as fb;
 import 'package:objectbox/internal.dart'
     as obx_int; // generated code can access "internal" functionality
 import 'package:objectbox/objectbox.dart' as obx;
-import 'package:objectbox_flutter_libs/objectbox_flutter_libs.dart';
+import 'package:objectbox_sync_flutter_libs/objectbox_sync_flutter_libs.dart';
 
 import 'entitles/item.dart';
 import 'entitles/user.dart';
@@ -25,7 +25,7 @@ final _entities = <obx_int.ModelEntity>[
       id: const obx_int.IdUid(1, 2991653030238645718),
       name: 'Item',
       lastPropertyId: const obx_int.IdUid(10, 4052540585537623492),
-      flags: 0,
+      flags: 2,
       properties: <obx_int.ModelProperty>[
         obx_int.ModelProperty(
             id: const obx_int.IdUid(1, 8741631405361082448),
@@ -88,7 +88,7 @@ final _entities = <obx_int.ModelEntity>[
       id: const obx_int.IdUid(2, 776245123130376692),
       name: 'User',
       lastPropertyId: const obx_int.IdUid(2, 2752247423445540932),
-      flags: 0,
+      flags: 2,
       properties: <obx_int.ModelProperty>[
         obx_int.ModelProperty(
             id: const obx_int.IdUid(1, 7050899754481115148),
