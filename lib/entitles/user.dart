@@ -2,6 +2,7 @@ import 'package:go_lance/entitles/item.dart';
 import 'package:objectbox/objectbox.dart';
 
 @Entity()
+@Sync()
 class User {
   int id;
   String name;
