@@ -11,7 +11,7 @@ class ObjectBox {
 
   static Future<ObjectBox> create() async {
     final dir = await getApplicationDocumentsDirectory();
-    final store = await openStore(directory: p.join(dir.path, "go_lance_data"));
+    final store = await openStore(directory: p.join(dir.path, "go_lance_data2"));
 
     return ObjectBox._(store);
   }
